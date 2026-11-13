@@ -1,0 +1,6 @@
+.env
+.env.*
+evidence/
+*.log
+*.docx
+*.png

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-config
+data:
+  GREETING: {{ .Values.config.greeting | quote }}
+  STUDENT: {{ .Values.config.student | quote }}
+  VARIANT: {{ .Values.config.variant | quote }}
+  DB_NAME: {{ .Values.db.name | quote }}
+  DB_USER: {{ .Values.db.user | quote }}
+{{- if .Values.db.enabled }}
+  DB_HOST: {{ printf "%s-db" .Release.Name | quote }}
+{{- end }}

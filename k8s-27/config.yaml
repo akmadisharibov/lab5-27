@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: web-config
+data:
+  GREETING: "Updated"
+  STUDENT: "Sharibov"
+  VARIANT: "27"
+  DB_NAME: "appdb"
+  DB_USER: "appuser"
+  DB_HOST: "db"
